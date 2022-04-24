@@ -71,7 +71,25 @@ class Downloader: ObservableObject {
           print("File access error - \(error)")
         }
         do {
-          _ = try Interpreter(modelPath: self.filePath)
+          let interpreter = try Interpreter(modelPath: self.filePath)
+            guard let sourceURL =  Bundle.main.url(forResource: "Voltages", withExtension: "json") else {
+                fatalError("Could not find Voltages.json")
+            }
+            guard let data = try? Data(contentsOf: sourceURL) else {
+                fatalError("Could not convert data")
+            }
+            try interpreter.allocateTensors()
+            try interpreter.copy(data, toInputAt: 0)
+            try interpreter.invoke()
+            
+//            let prob = UnsafeMutableBufferPointer<Float64>.allocate(capacity: 1000)
+//            let output = try interpreter.output(at: 0).data.copyBytes(to: prob)
+//            print(prob)
+            let output = try interpreter.output(at: 0)
+            print(output)
+            let probabilities = self.dataToFloatArray(output.data)
+            print(probabilities)
+            
         } catch {
           print("Tensorflow error - \(error)")
         }
@@ -132,4 +150,18 @@ class Downloader: ObservableObject {
       }
     }
   }
+    private func dataToFloatArray(_ data: Data) -> [Float]? {
+        guard data.count % MemoryLayout<Float>.stride == 0 else { return nil }
+
+        #if swift(>=5.0)
+        return data.withUnsafeBytes { .init($0.bindMemory(to: Float.self)) }
+        #else
+        return data.withUnsafeBytes {
+          .init(UnsafeBufferPointer<Float>(
+            start: $0,
+            count: unsafeData.count / MemoryLayout<Element>.stride
+          ))
+        }
+        #endif // swift(>=5.0)
+      }
 }

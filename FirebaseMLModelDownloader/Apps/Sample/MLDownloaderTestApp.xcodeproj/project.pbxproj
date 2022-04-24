@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		07BB5A04CA1312F86A973058 /* Pods_MLDownloaderTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA0C7A8283CC88DBA487171 /* Pods_MLDownloaderTestApp.framework */; };
+		2B6B37BF2814D31E0074C977 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B37BE2814D31E0074C977 /* GoogleService-Info.plist */; };
+		2B6B37C12814DB180074C977 /* RunModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B37C02814DB180074C977 /* RunModel.swift */; };
+		2B6B37C42814E1FC0074C977 /* Voltages.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B37C32814E1FC0074C977 /* Voltages.json */; };
+		2B6B37C6281594D20074C977 /* ECGSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B37C5281594D20074C977 /* ECGSample.swift */; };
+		2B6B37C8281595760074C977 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B37C7281595760074C977 /* ModelData.swift */; };
+		2B6B37CA2815A79D0074C977 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B37C92815A79D0074C977 /* DataExtensions.swift */; };
 		6915E92311191C32B3B80134 /* Pods_MLDownloaderTestApp_MLDownloaderTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF958C46F61DC40BD1D25898 /* Pods_MLDownloaderTestApp_MLDownloaderTestAppTests.framework */; };
-		A61B7A3825C0E69800D643C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A61B7A3725C0E69800D643C5 /* GoogleService-Info.plist */; };
 		A6338C3E25893DFB001A6401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6338C3D25893DFB001A6401 /* AppDelegate.swift */; };
 		A6338C4225893DFB001A6401 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6338C4125893DFB001A6401 /* ContentView.swift */; };
 		A6338C4425893DFE001A6401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6338C4325893DFE001A6401 /* Assets.xcassets */; };
@@ -57,8 +62,13 @@
 /* Begin PBXFileReference section */
 		28B90F3CBFDC23142FA82356 /* Pods-MLDownloaderTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLDownloaderTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MLDownloaderTestApp/Pods-MLDownloaderTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		28C835CA2BBE48AABE55BC71 /* Pods_MLDownloaderTestApp_MLDownloaderTestAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLDownloaderTestApp_MLDownloaderTestAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B6B37BE2814D31E0074C977 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B6B37C02814DB180074C977 /* RunModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunModel.swift; sourceTree = "<group>"; };
+		2B6B37C32814E1FC0074C977 /* Voltages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Voltages.json; sourceTree = "<group>"; };
+		2B6B37C5281594D20074C977 /* ECGSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGSample.swift; sourceTree = "<group>"; };
+		2B6B37C7281595760074C977 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		2B6B37C92815A79D0074C977 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 		8AD845EE89ABB7AB1CA74744 /* Pods-MLDownloaderTestApp-MLDownloaderTestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLDownloaderTestApp-MLDownloaderTestAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MLDownloaderTestApp-MLDownloaderTestAppUITests/Pods-MLDownloaderTestApp-MLDownloaderTestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A61B7A3725C0E69800D643C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Resources/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A6338C3A25893DFB001A6401 /* MLDownloaderTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLDownloaderTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6338C3D25893DFB001A6401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6338C4125893DFB001A6401 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,15 +162,20 @@
 		A6338C3C25893DFB001A6401 /* MLDownloaderTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				A61B7A3725C0E69800D643C5 /* GoogleService-Info.plist */,
 				A676916A259EB420000AA74D /* LaunchScreen.storyboard */,
 				A6769157259EB2DC000AA74D /* SceneDelegate.swift */,
 				A6338C3D25893DFB001A6401 /* AppDelegate.swift */,
 				A6338C4125893DFB001A6401 /* ContentView.swift */,
 				A67690C8259E94AD000AA74D /* Downloader.swift */,
+				2B6B37C02814DB180074C977 /* RunModel.swift */,
+				2B6B37C5281594D20074C977 /* ECGSample.swift */,
+				2B6B37C7281595760074C977 /* ModelData.swift */,
+				2B6B37C92815A79D0074C977 /* DataExtensions.swift */,
 				A6338C4325893DFE001A6401 /* Assets.xcassets */,
 				A6338C4B25893DFE001A6401 /* Info.plist */,
+				2B6B37BE2814D31E0074C977 /* GoogleService-Info.plist */,
 				A6338C4525893DFE001A6401 /* Preview Content */,
+				2B6B37C32814E1FC0074C977 /* Voltages.json */,
 			);
 			path = MLDownloaderTestApp;
 			sourceTree = "<group>";
@@ -312,7 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6338C4725893DFE001A6401 /* Preview Assets.xcassets in Resources */,
-				A61B7A3825C0E69800D643C5 /* GoogleService-Info.plist in Resources */,
+				2B6B37C42814E1FC0074C977 /* Voltages.json in Resources */,
+				2B6B37BF2814D31E0074C977 /* GoogleService-Info.plist in Resources */,
 				A676916C259EB420000AA74D /* LaunchScreen.storyboard in Resources */,
 				A6338C4425893DFE001A6401 /* Assets.xcassets in Resources */,
 			);
@@ -460,9 +476,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6338C3E25893DFB001A6401 /* AppDelegate.swift in Sources */,
+				2B6B37CA2815A79D0074C977 /* DataExtensions.swift in Sources */,
 				A67690C9259E94AE000AA74D /* Downloader.swift in Sources */,
 				A6338C4225893DFB001A6401 /* ContentView.swift in Sources */,
+				2B6B37C6281594D20074C977 /* ECGSample.swift in Sources */,
 				A6769158259EB2DC000AA74D /* SceneDelegate.swift in Sources */,
+				2B6B37C12814DB180074C977 /* RunModel.swift in Sources */,
+				2B6B37C8281595760074C977 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,19 +653,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MLDownloaderTestApp/Preview Content\"";
-				DEVELOPMENT_TEAM = EQHXZ8M8AV;
+				DEVELOPMENT_TEAM = XVJU3WLS3N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MLDownloaderTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.MLDownloaderTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.wakehealth.mldownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Google Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -657,19 +677,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MLDownloaderTestApp/Preview Content\"";
-				DEVELOPMENT_TEAM = EQHXZ8M8AV;
+				DEVELOPMENT_TEAM = XVJU3WLS3N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MLDownloaderTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.MLDownloaderTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.wakehealth.mldownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Google Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,9 +699,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8D4472243EB359D834597B3 /* Pods-MLDownloaderTestApp-MLDownloaderTestAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XVJU3WLS3N;
 				INFOPLIST_FILE = MLDownloaderTestAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,9 +722,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A78C0FF286D9919CEF734166 /* Pods-MLDownloaderTestApp-MLDownloaderTestAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XVJU3WLS3N;
 				INFOPLIST_FILE = MLDownloaderTestAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -723,8 +745,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AD845EE89ABB7AB1CA74744 /* Pods-MLDownloaderTestApp-MLDownloaderTestAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XVJU3WLS3N;
 				INFOPLIST_FILE = MLDownloaderTestAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -743,8 +766,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E030EB120D34BE1BF596CC34 /* Pods-MLDownloaderTestApp-MLDownloaderTestAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XVJU3WLS3N;
 				INFOPLIST_FILE = MLDownloaderTestAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
